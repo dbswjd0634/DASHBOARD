@@ -1,0 +1,49 @@
+﻿<Page x:Class="dashboard3_수정.setup"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:dashboard3_수정"
+      mc:Ignorable="d" 
+     d:DesignHeight="930" d:DesignWidth="1920"
+      Title="log">
+    <Page.Background>
+        <ImageBrush ImageSource="백그라운드.png"/>
+    </Page.Background>
+
+    <Grid RenderTransformOrigin="0.466,0.569">
+        <StackPanel HorizontalAlignment="Left" Height="930" Margin="0,0,0,0" VerticalAlignment="Top" Width="150" >
+            <StackPanel.Background>
+                <ImageBrush ImageSource="좌측바.png"/>
+            </StackPanel.Background>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="535" Margin="249,76,0,0" VerticalAlignment="Top" Width="200">
+            <TextBox x:Name="device_ip" HorizontalAlignment="Left" Height="30" FontSize="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
+            <Grid HorizontalAlignment="Left" Width="56" Height="20"/>
+            <TextBox x:Name="device_id" HorizontalAlignment="Left" Height="30" FontSize="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
+            <Grid HorizontalAlignment="Left" Width="56" Height="20"/>
+            <TextBox x:Name="device_pw" HorizontalAlignment="Left" Height="30" FontSize="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
+            <Grid HorizontalAlignment="Left" Width="56" Height="20"/>
+            <TextBox x:Name="device_Mac" HorizontalAlignment="Left" Height="30" FontSize="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="196"/>
+            <Grid HorizontalAlignment="Left" Width="56" Height="20"/>
+            <TextBox x:Name="device_subn" HorizontalAlignment="Left" Height="30" FontSize="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" TextChanged="device_svbn_TextChanged"/>
+            <Grid HorizontalAlignment="Left" Width="56" Height="20"/>
+            <Button x:Name="button1" Content="장치 생성" HorizontalAlignment="Left" VerticalAlignment="Top" Width="88" Click="button1_Click" Foreground="White" Height="32">
+                <Button.Background>
+                    <ImageBrush ImageSource="좌측배경.png"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="313" VerticalAlignment="Top" Width="102" Margin="183,73,0,0">
+            <Label x:Name="label1" Content="IP" HorizontalAlignment="Left" FontSize="20" Height="50" Width="74" Foreground="White"/>
+            <Label x:Name="label1_Copy3" Content="ID" HorizontalAlignment="Left" FontSize="20" Height="50" Width="74" Foreground="White"/>
+            <Label x:Name="label1_Copy2" Content="PW" HorizontalAlignment="Left" FontSize="20" Height="50" Width="74" Foreground="White"/>
+            <Label x:Name="label1_Copy1" Content="Mac" HorizontalAlignment="Left" FontSize="20" Height="50" Width="74" Foreground="White"/>
+            <Label x:Name="label1_Copy" Content="SUBN" HorizontalAlignment="Left" FontSize="20" Height="50" Width="74" Foreground="White"/>
+        </StackPanel>
+        <Label x:Name="label2" Content="장치 추가" HorizontalAlignment="Left" Height="38" Margin="295,30,0,0" VerticalAlignment="Top" Width="174" Foreground="White" FontWeight="Bold" FontSize="18"/>
+
+
+
+    </Grid>
+</Page>

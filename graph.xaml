@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="dashboard3_수정.graph"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:dashboard3_수정"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             mc:Ignorable="d" 
+             d:DataContext="{d:DesignInstance local:graph}" Height="339.2" Width="389.6">
+    <Grid Margin="10,0,0,9.8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="326*"/>
+            <ColumnDefinition Width="143*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,0,-0.6,399.2" Grid.RowSpan="2"/>
+        <lvc:PieChart 
+            Name="Chart" Grid.Row="1" Series="{Binding SeriesCollection}"  
+
+            LegendLocation="Right" InnerRadius="60" Margin="10,0,-0.8,0" Height="319" VerticalAlignment="Top" Grid.ColumnSpan="2" Foreground="White" FontSize="15" Loaded="Chart_Loaded">
+            <lvc:PieChart.ChartLegend>
+                <lvc:DefaultLegend  BulletSize="20"></lvc:DefaultLegend>
+            </lvc:PieChart.ChartLegend>
+            <lvc:PieChart.DataTooltip>
+                <lvc:DefaultTooltip  BulletSize="20" Foreground="Black" ></lvc:DefaultTooltip>
+            </lvc:PieChart.DataTooltip>
+        </lvc:PieChart>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="117,143,0,0" Grid.Row="1" VerticalAlignment="Top" Name="gName" Foreground="White" FontSize="20"/>
+    </Grid>
+</UserControl> 

@@ -1,0 +1,34 @@
+﻿<Page x:Class="dashboard3_수정.home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:dashboard3_수정"
+      mc:Ignorable="d" 
+      d:DesignHeight="850" d:DesignWidth="1450"
+      Title="home">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="백그라운드.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Left" Height="320" Margin="575,250,0,0" VerticalAlignment="Top" Width="371">
+            <local:graph x:Name="CCTV" Margin="0,0,0.4,0" Height="370" Width="Auto" RenderTransformOrigin="0.502,0.824"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="320" Margin="101,250,0,0" VerticalAlignment="Top" Width="371">
+            <local:graph x:Name="SaveOp" Height="370" Width="Auto" RenderTransformOrigin="0.502,0.824" Foreground="{x:Null}" Loaded="graph_Loaded" >
+                <local:graph.Background>
+                    <ImageBrush/>
+                </local:graph.Background>
+            </local:graph>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Height="320" Margin="1009,250,0,0" VerticalAlignment="Top" Width="371">
+            <local:graph Margin="0,0,0.2,0" Height="319" Width="Auto" RenderTransformOrigin="0.502,0.824"/>
+        </StackPanel>
+        <Label Content="영상저장장치" HorizontalAlignment="Left" Margin="188,560,0,0" VerticalAlignment="Top" Height="40" Width="130" FontSize="20" FontWeight="Bold" Foreground="#FFFFF8F8"/>
+        <Label Content="CCTV 카메라" HorizontalAlignment="Left" Margin="660,560,0,0" VerticalAlignment="Top" Height="40" Width="130" FontWeight="Bold" FontSize="20" Foreground="White"/>
+        <Label Content="운영 서버" HorizontalAlignment="Left" Margin="1122,560,0,0" VerticalAlignment="Top" Height="40" Width="130" FontWeight="Bold" FontSize="20" Foreground="White"/>
+    </Grid>
+</Page>
